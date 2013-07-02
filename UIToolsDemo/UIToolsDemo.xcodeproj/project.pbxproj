@@ -24,6 +24,7 @@
 		D5937B4F17832F58001B4737 /* UIViewController+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B4B17832F58001B4737 /* UIViewController+EYTools.m */; };
 		D5937B5217833259001B4737 /* NSNumber+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B5117833259001B4737 /* NSNumber+EYTools.m */; };
 		D5937B5517833269001B4737 /* UIView+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B5417833269001B4737 /* UIView+EYTools.m */; };
+		D5937B751783541A001B4737 /* NSString+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B741783541A001B4737 /* NSString+EYTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		D5937B5117833259001B4737 /* NSNumber+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+EYTools.m"; sourceTree = "<group>"; };
 		D5937B5317833269001B4737 /* UIView+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EYTools.h"; sourceTree = "<group>"; };
 		D5937B5417833269001B4737 /* UIView+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EYTools.m"; sourceTree = "<group>"; };
+		D5937B731783541A001B4737 /* NSString+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EYTools.h"; sourceTree = "<group>"; };
+		D5937B741783541A001B4737 /* NSString+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EYTools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D5937B4117832F58001B4737 /* CoreLocation */,
-				D5937B4417832F58001B4737 /* Other */,
+				D5937B4417832F58001B4737 /* Foundation */,
 				D5937B4717832F58001B4737 /* UIKit */,
 			);
 			name = UITools;
@@ -147,15 +150,17 @@
 			path = ../../CoreLocation;
 			sourceTree = "<group>";
 		};
-		D5937B4417832F58001B4737 /* Other */ = {
+		D5937B4417832F58001B4737 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
 				D5937B5017833259001B4737 /* NSNumber+EYTools.h */,
 				D5937B5117833259001B4737 /* NSNumber+EYTools.m */,
 				D5937B4517832F58001B4737 /* NSDate+EYTools.h */,
 				D5937B4617832F58001B4737 /* NSDate+EYTools.m */,
+				D5937B731783541A001B4737 /* NSString+EYTools.h */,
+				D5937B741783541A001B4737 /* NSString+EYTools.m */,
 			);
-			name = Other;
+			name = Foundation;
 			path = ../../Other;
 			sourceTree = "<group>";
 		};
@@ -249,6 +254,7 @@
 				D5937B4F17832F58001B4737 /* UIViewController+EYTools.m in Sources */,
 				D5937B5217833259001B4737 /* NSNumber+EYTools.m in Sources */,
 				D5937B5517833269001B4737 /* UIView+EYTools.m in Sources */,
+				D5937B751783541A001B4737 /* NSString+EYTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
