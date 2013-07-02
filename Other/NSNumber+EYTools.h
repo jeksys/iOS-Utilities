@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSNumber (utils)
+@interface NSNumber (EYTools)
 
 - (NSString*) currencyString;
 

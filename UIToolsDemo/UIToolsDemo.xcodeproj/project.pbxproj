@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D5937B1E17832F34001B4737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5937B1D17832F34001B4737 /* UIKit.framework */; };
+		D5937B2017832F34001B4737 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5937B1F17832F34001B4737 /* Foundation.framework */; };
+		D5937B2217832F34001B4737 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5937B2117832F34001B4737 /* CoreGraphics.framework */; };
+		D5937B2817832F34001B4737 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5937B2617832F34001B4737 /* InfoPlist.strings */; };
+		D5937B2A17832F34001B4737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B2917832F34001B4737 /* main.m */; };
+		D5937B2E17832F34001B4737 /* EYTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B2D17832F34001B4737 /* EYTAppDelegate.m */; };
+		D5937B3017832F34001B4737 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5937B2F17832F34001B4737 /* Default.png */; };
+		D5937B3217832F34001B4737 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5937B3117832F34001B4737 /* Default@2x.png */; };
+		D5937B3417832F34001B4737 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5937B3317832F34001B4737 /* Default-568h@2x.png */; };
+		D5937B3717832F34001B4737 /* EYTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B3617832F34001B4737 /* EYTViewController.m */; };
+		D5937B3A17832F34001B4737 /* EYTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5937B3817832F34001B4737 /* EYTViewController.xib */; };
+		D5937B4C17832F58001B4737 /* CLLocationManager+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B4317832F58001B4737 /* CLLocationManager+EYTools.m */; };
+		D5937B4D17832F58001B4737 /* NSDate+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B4617832F58001B4737 /* NSDate+EYTools.m */; };
+		D5937B4E17832F58001B4737 /* UITableView+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B4917832F58001B4737 /* UITableView+EYTools.m */; };
+		D5937B4F17832F58001B4737 /* UIViewController+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B4B17832F58001B4737 /* UIViewController+EYTools.m */; };
+		D5937B5217833259001B4737 /* NSNumber+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B5117833259001B4737 /* NSNumber+EYTools.m */; };
+		D5937B5517833269001B4737 /* UIView+EYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D5937B5417833269001B4737 /* UIView+EYTools.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D5937B1A17832F34001B4737 /* UIToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5937B1D17832F34001B4737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D5937B1F17832F34001B4737 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D5937B2117832F34001B4737 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D5937B2517832F34001B4737 /* UIToolsDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIToolsDemo-Info.plist"; sourceTree = "<group>"; };
+		D5937B2717832F34001B4737 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D5937B2917832F34001B4737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D5937B2B17832F34001B4737 /* UIToolsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIToolsDemo-Prefix.pch"; sourceTree = "<group>"; };
+		D5937B2C17832F34001B4737 /* EYTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EYTAppDelegate.h; sourceTree = "<group>"; };
+		D5937B2D17832F34001B4737 /* EYTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EYTAppDelegate.m; sourceTree = "<group>"; };
+		D5937B2F17832F34001B4737 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D5937B3117832F34001B4737 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D5937B3317832F34001B4737 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D5937B3517832F34001B4737 /* EYTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EYTViewController.h; sourceTree = "<group>"; };
+		D5937B3617832F34001B4737 /* EYTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EYTViewController.m; sourceTree = "<group>"; };
+		D5937B3917832F34001B4737 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EYTViewController.xib; sourceTree = "<group>"; };
+		D5937B4217832F58001B4737 /* CLLocationManager+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+EYTools.h"; sourceTree = "<group>"; };
+		D5937B4317832F58001B4737 /* CLLocationManager+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+EYTools.m"; sourceTree = "<group>"; };
+		D5937B4517832F58001B4737 /* NSDate+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+EYTools.h"; sourceTree = "<group>"; };
+		D5937B4617832F58001B4737 /* NSDate+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+EYTools.m"; sourceTree = "<group>"; };
+		D5937B4817832F58001B4737 /* UITableView+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+EYTools.h"; sourceTree = "<group>"; };
+		D5937B4917832F58001B4737 /* UITableView+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+EYTools.m"; sourceTree = "<group>"; };
+		D5937B4A17832F58001B4737 /* UIViewController+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EYTools.h"; sourceTree = "<group>"; };
+		D5937B4B17832F58001B4737 /* UIViewController+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EYTools.m"; sourceTree = "<group>"; };
+		D5937B5017833259001B4737 /* NSNumber+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+EYTools.h"; sourceTree = "<group>"; };
+		D5937B5117833259001B4737 /* NSNumber+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+EYTools.m"; sourceTree = "<group>"; };
+		D5937B5317833269001B4737 /* UIView+EYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EYTools.h"; sourceTree = "<group>"; };
+		D5937B5417833269001B4737 /* UIView+EYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EYTools.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5937B1717832F34001B4737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5937B1E17832F34001B4737 /* UIKit.framework in Frameworks */,
+				D5937B2017832F34001B4737 /* Foundation.framework in Frameworks */,
+				D5937B2217832F34001B4737 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5937B1117832F34001B4737 = {
+			isa = PBXGroup;
+			children = (
+				D5937B4017832F40001B4737 /* UITools */,
+				D5937B2317832F34001B4737 /* UIToolsDemo */,
+				D5937B1C17832F34001B4737 /* Frameworks */,
+				D5937B1B17832F34001B4737 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5937B1B17832F34001B4737 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B1A17832F34001B4737 /* UIToolsDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5937B1C17832F34001B4737 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B1D17832F34001B4737 /* UIKit.framework */,
+				D5937B1F17832F34001B4737 /* Foundation.framework */,
+				D5937B2117832F34001B4737 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5937B2317832F34001B4737 /* UIToolsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B2C17832F34001B4737 /* EYTAppDelegate.h */,
+				D5937B2D17832F34001B4737 /* EYTAppDelegate.m */,
+				D5937B3517832F34001B4737 /* EYTViewController.h */,
+				D5937B3617832F34001B4737 /* EYTViewController.m */,
+				D5937B3817832F34001B4737 /* EYTViewController.xib */,
+				D5937B2417832F34001B4737 /* Supporting Files */,
+			);
+			path = UIToolsDemo;
+			sourceTree = "<group>";
+		};
+		D5937B2417832F34001B4737 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B2517832F34001B4737 /* UIToolsDemo-Info.plist */,
+				D5937B2617832F34001B4737 /* InfoPlist.strings */,
+				D5937B2917832F34001B4737 /* main.m */,
+				D5937B2B17832F34001B4737 /* UIToolsDemo-Prefix.pch */,
+				D5937B2F17832F34001B4737 /* Default.png */,
+				D5937B3117832F34001B4737 /* Default@2x.png */,
+				D5937B3317832F34001B4737 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D5937B4017832F40001B4737 /* UITools */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B4117832F58001B4737 /* CoreLocation */,
+				D5937B4417832F58001B4737 /* Other */,
+				D5937B4717832F58001B4737 /* UIKit */,
+			);
+			name = UITools;
+			path = UIToolsDemo;
+			sourceTree = "<group>";
+		};
+		D5937B4117832F58001B4737 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B4217832F58001B4737 /* CLLocationManager+EYTools.h */,
+				D5937B4317832F58001B4737 /* CLLocationManager+EYTools.m */,
+			);
+			name = CoreLocation;
+			path = ../../CoreLocation;
+			sourceTree = "<group>";
+		};
+		D5937B4417832F58001B4737 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B5017833259001B4737 /* NSNumber+EYTools.h */,
+				D5937B5117833259001B4737 /* NSNumber+EYTools.m */,
+				D5937B4517832F58001B4737 /* NSDate+EYTools.h */,
+				D5937B4617832F58001B4737 /* NSDate+EYTools.m */,
+			);
+			name = Other;
+			path = ../../Other;
+			sourceTree = "<group>";
+		};
+		D5937B4717832F58001B4737 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D5937B5317833269001B4737 /* UIView+EYTools.h */,
+				D5937B5417833269001B4737 /* UIView+EYTools.m */,
+				D5937B4817832F58001B4737 /* UITableView+EYTools.h */,
+				D5937B4917832F58001B4737 /* UITableView+EYTools.m */,
+				D5937B4A17832F58001B4737 /* UIViewController+EYTools.h */,
+				D5937B4B17832F58001B4737 /* UIViewController+EYTools.m */,
+			);
+			name = UIKit;
+			path = ../../UIKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5937B1917832F34001B4737 /* UIToolsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5937B3D17832F34001B4737 /* Build configuration list for PBXNativeTarget "UIToolsDemo" */;
+			buildPhases = (
+				D5937B1617832F34001B4737 /* Sources */,
+				D5937B1717832F34001B4737 /* Frameworks */,
+				D5937B1817832F34001B4737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIToolsDemo;
+			productName = UIToolsDemo;
+			productReference = D5937B1A17832F34001B4737 /* UIToolsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5937B1217832F34001B4737 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EYT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Evgeny Yagrushkin";
+			};
+			buildConfigurationList = D5937B1517832F34001B4737 /* Build configuration list for PBXProject "UIToolsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D5937B1117832F34001B4737;
+			productRefGroup = D5937B1B17832F34001B4737 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5937B1917832F34001B4737 /* UIToolsDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5937B1817832F34001B4737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5937B2817832F34001B4737 /* InfoPlist.strings in Resources */,
+				D5937B3017832F34001B4737 /* Default.png in Resources */,
+				D5937B3217832F34001B4737 /* Default@2x.png in Resources */,
+				D5937B3417832F34001B4737 /* Default-568h@2x.png in Resources */,
+				D5937B3A17832F34001B4737 /* EYTViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5937B1617832F34001B4737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5937B2A17832F34001B4737 /* main.m in Sources */,
+				D5937B2E17832F34001B4737 /* EYTAppDelegate.m in Sources */,
+				D5937B3717832F34001B4737 /* EYTViewController.m in Sources */,
+				D5937B4C17832F58001B4737 /* CLLocationManager+EYTools.m in Sources */,
+				D5937B4D17832F58001B4737 /* NSDate+EYTools.m in Sources */,
+				D5937B4E17832F58001B4737 /* UITableView+EYTools.m in Sources */,
+				D5937B4F17832F58001B4737 /* UIViewController+EYTools.m in Sources */,
+				D5937B5217833259001B4737 /* NSNumber+EYTools.m in Sources */,
+				D5937B5517833269001B4737 /* UIView+EYTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D5937B2617832F34001B4737 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5937B2717832F34001B4737 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D5937B3817832F34001B4737 /* EYTViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5937B3917832F34001B4737 /* en */,
+			);
+			name = EYTViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5937B3B17832F34001B4737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D5937B3C17832F34001B4737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5937B3E17832F34001B4737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIToolsDemo/UIToolsDemo-Prefix.pch";
+				INFOPLIST_FILE = "UIToolsDemo/UIToolsDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D5937B3F17832F34001B4737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIToolsDemo/UIToolsDemo-Prefix.pch";
+				INFOPLIST_FILE = "UIToolsDemo/UIToolsDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5937B1517832F34001B4737 /* Build configuration list for PBXProject "UIToolsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5937B3B17832F34001B4737 /* Debug */,
+				D5937B3C17832F34001B4737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5937B3D17832F34001B4737 /* Build configuration list for PBXNativeTarget "UIToolsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5937B3E17832F34001B4737 /* Debug */,
+				D5937B3F17832F34001B4737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5937B1217832F34001B4737 /* Project object */;
+}

@@ -1,12 +1,11 @@
 //
-//  UIView+frame.h
-//
-//  Created by Evgeny Yagrushkin
+//  Created by Evgeny Yagrushkin on 2013-07-01.
+//  Copyright (c) 2013 Evgeny Yagrushkin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (frame)
+@interface UIView (EYTools)
 -(void) setOrigin:(CGPoint)loc;
 -(void) setX:(CGFloat)x;
 -(void) setY:(CGFloat)y;

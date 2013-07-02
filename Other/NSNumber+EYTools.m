@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Evgeny Yagrushkin. All rights reserved.
 //
 
-#import "NSNumber+utils.h"
+#import "NSNumber+EYTools.h"
 
-@implementation NSNumber (utils)
+@implementation NSNumber (EYTools)
 
 - (NSString*) currencyString{
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];

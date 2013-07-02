@@ -1,12 +1,11 @@
 //
-//  UIView+frame.m
-//
-//  Created by Evgeny Yagrushkin
+//  Created by Evgeny Yagrushkin on 2013-07-01.
+//  Copyright (c) 2013 Evgeny Yagrushkin. All rights reserved.
 //
 
-#import "UIView+frame.h"
+#import "UIView+EYTools.h"
 
-@implementation UIView (frame)
+@implementation UIView (EYTools)
 -(void) setOrigin:(CGPoint)loc
 {
     CGRect rc = self.frame;
