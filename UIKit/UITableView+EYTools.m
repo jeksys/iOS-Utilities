@@ -3,7 +3,7 @@
 //  Copyright (c) 2013 Evgeny Yagrushkin. All rights reserved.
 //
 
-#import "UITableView+views.h"
+#import "UITableView+EYTools.h"
 
 @implementation UITableView (EYTools)
 
