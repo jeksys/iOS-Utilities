@@ -17,7 +17,6 @@ static NSDate *startDate;
 
 @implementation NSDate (EYTools)
 
-
 - (NSString*) shortFormat{
     static NSDateFormatter* formatter;
 	if(formatter == nil) {
@@ -66,7 +65,6 @@ static NSDate *startDate;
 	}
 	return [longFormatFormatterMDY stringFromDate:self];
 }
-
 
 - (NSString*) longFormatAMPM{
     static NSDateFormatter* longFormatAMPMFormatter;
@@ -147,21 +145,16 @@ static NSDate *startDate;
 	return [timeFormatter stringFromDate:self];
 }
 
-
-- (NSString *) humanIntervalSinceNowDaysOnly {
-    NSDate *todayDate = [NSDate dateWithYear:[[NSDate date] year] month:[[NSDate date] month] day:[[NSDate date] day]];
-    int delta = [self timeIntervalSinceDate:todayDate];
-
-    delta *= -1;
-    if (delta < 24 * HOUR) {
-        return @"1 day ago";
-    } else if (delta < 1 * DAY) {
-        return @"2 days ago";
-    } else if (delta < 1 * WEEK) {
-        [NSString stringWithFormat:@"more then a week ago"];
-    }
-    
-    return @"Long time ago";
+- (NSString*) longFormatDayMDY{
+    static NSDateFormatter* longFormatDayMDY;
+	if(longFormatDayMDY == nil) {
+		longFormatDayMDY = [[NSDateFormatter alloc] init];
+		NSLocale* enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+		[longFormatDayMDY setLocale: enUS];
+		[longFormatDayMDY setLenient: YES];
+		[longFormatDayMDY setDateFormat:@"EEE MMMM dd/yy"];
+	}
+	return [longFormatDayMDY stringFromDate:self];
 }
 
 @end

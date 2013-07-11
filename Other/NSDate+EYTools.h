@@ -14,8 +14,8 @@
 - (NSString*) shortTimeStampFormat;
 - (NSString*) longFormat;
 - (NSString*) longFormatAMPM;
-- (NSString *) humanIntervalSinceNowDaysOnly;
 - (NSString*) longFormatMDY;
+- (NSString*) longFormatDayMDY;
 
 + (NSDate*) dateWithYear:(int) year month:(int)month day:(int)day;
 + (NSDate*) dateWithDouble:(double)doubleDate;
