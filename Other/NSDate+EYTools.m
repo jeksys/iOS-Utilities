@@ -13,8 +13,6 @@
 
 #import "NSDate+EYTools.h"
 
-static NSDate *startDate;
-
 @implementation NSDate (EYTools)
 
 - (NSString*) shortFormat{
