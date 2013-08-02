@@ -59,7 +59,7 @@
 		NSLocale* enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
 		[longFormatFormatterMDY setLocale: enUS];
 		[longFormatFormatterMDY setLenient: YES];
-		[longFormatFormatterMDY setDateFormat:@"MMMM dd, yyyy"];
+		[longFormatFormatterMDY setDateFormat:@"MMM dd, yyyy"];
 	}
 	return [longFormatFormatterMDY stringFromDate:self];
 }
