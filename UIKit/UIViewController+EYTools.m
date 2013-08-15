@@ -10,6 +10,16 @@
 
 #pragma mark - messages
 
+- (UIBarButtonItem*) addDismissButton{
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissViewController:)];
+    return self.navigationItem.leftBarButtonItem;
+}
+
+- (void) dismissViewController{
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
 - (NSString*)stringForError:(NSError*)error{
     
     NSString *errorText = @"An Error Occurred";

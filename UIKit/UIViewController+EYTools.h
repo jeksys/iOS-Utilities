@@ -7,6 +7,10 @@
 
 @interface UIViewController (EYTools)
 
+- (UIBarButtonItem*) addDismissButton;
+- (void) dismissViewController;
+
+
 - (void) showError:(NSError*)error;
 - (void) showErrorMessage:(NSString*)errorMessage;
 - (void) showWarningMessage:(NSString*)errorMessage;
