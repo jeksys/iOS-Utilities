@@ -17,6 +17,7 @@
 - (NSString*) longFormatMDY;
 - (NSString*) longFormatDayMDY;
 - (NSString*) timeFormat;
+- (NSString*) timeFormatShort;
 
 + (NSDate*) dateWithYear:(int) year month:(int)month day:(int)day;
 + (NSDate*) dateWithDouble:(double)doubleDate;
