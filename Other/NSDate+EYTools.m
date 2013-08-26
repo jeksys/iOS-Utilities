@@ -167,4 +167,75 @@
 	return [longFormatDayMDY stringFromDate:self];
 }
 
+- (NSDate*) updateDateComponentWithDate:(NSDate*)date{
+
+    NSCalendar *cal = [[NSCalendar alloc] init];
+    NSDateComponents *components = [cal components:0 fromDate:date];
+    int year = [components year];
+    int month = [components month];
+    int day = [components day];
+    
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setDay:year];
+    [comps setMonth:month];
+    [comps setYear:day];
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:comps];
+}
+
++ (NSDate *)dateByDroppingSecondsFromDate:(NSDate *)date
+{
+    NSTimeInterval timeInterval = floor([date timeIntervalSinceReferenceDate] / 60.0) * 60.0;
+    NSDate *roundedDate = [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
+    return roundedDate;
+}
+
++ (NSDate *)timeValueFromDate:(NSDate *)date
+{
+    // Create Gregorian calendar with current locale
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    calendar.locale = [NSLocale currentLocale];
+    
+    // Get time components from specified date
+    NSUInteger timeFlags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSDateComponents *timeComponents = [calendar components:timeFlags fromDate:date];
+    
+    NSDate *timeDate = [calendar dateFromComponents:timeComponents];
+    return timeDate;
+}
+
++ (NSDate *)dateByMovingToNearestTimeFromDate:(NSDate *)date
+{
+    // Create Gregorian calendar with current locale
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    calendar.locale = [NSLocale currentLocale];
+    
+    // Get date components from today date and time components from target date and merge it
+    NSUInteger dateFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSUInteger timeFlags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    
+    NSDateComponents *todayDateComponents = [calendar components:dateFlags fromDate:[NSDate date]];
+    NSDateComponents *targetTimeComponents = [calendar components:timeFlags fromDate:date];
+    
+    NSDateComponents *newComponents = [[NSDateComponents alloc] init];
+    newComponents.year = todayDateComponents.year;
+    newComponents.month = todayDateComponents.month;
+    newComponents.day = todayDateComponents.day;
+    newComponents.hour = targetTimeComponents.hour;
+    newComponents.minute = targetTimeComponents.minute;
+    newComponents.second = targetTimeComponents.second;
+    
+    // Create calculated date. If it earlier than now time, add one day to it
+    NSDate *newDate = [calendar dateFromComponents:newComponents];
+    if ([newDate compare:[NSDate date]] == NSOrderedAscending) {
+        NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
+        dayComponent.day = 1;
+        
+        newDate = [calendar dateByAddingComponents:dayComponent toDate:newDate options:0];
+    }
+    
+    return newDate;
+}
+
+
 @end

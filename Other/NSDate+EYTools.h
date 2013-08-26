@@ -22,5 +22,11 @@
 + (NSDate*) dateWithYear:(int) year month:(int)month day:(int)day;
 + (NSDate*) dateWithDouble:(double)doubleDate;
 
++ (NSDate *)dateByMovingToNearestTimeFromDate:(NSDate *)date;
++ (NSDate *)timeValueFromDate:(NSDate *)date;
++ (NSDate *)dateByDroppingSecondsFromDate:(NSDate *)date;
+
+- (NSDate*) updateDateComponentWithDate:(NSDate*)date;
+
 
 @end
