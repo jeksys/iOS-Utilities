@@ -25,6 +25,7 @@
 + (NSDate *)dateByMovingToNearestTimeFromDate:(NSDate *)date;
 + (NSDate *)timeValueFromDate:(NSDate *)date;
 + (NSDate *)dateByDroppingSecondsFromDate:(NSDate *)date;
+- (NSDate*) updateDateWithHour:(NSUInteger)hour andMinutes:(NSUInteger)minutes;
 
 - (NSDate*) updateDateComponentWithDate:(NSDate*)date;
 

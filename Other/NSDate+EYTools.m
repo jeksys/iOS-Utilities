@@ -183,6 +183,16 @@
     return [[NSCalendar currentCalendar] dateFromComponents:comps];
 }
 
+- (NSDate*) updateDateWithHour:(NSUInteger)hour andMinutes:(NSUInteger)minutes{
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components: NSYearCalendarUnit| NSMonthCalendarUnit| NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:[NSDate date]];
+    
+    [components setHour:hour];
+    [components setMinute:minutes];
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
 + (NSDate *)dateByDroppingSecondsFromDate:(NSDate *)date
 {
     NSTimeInterval timeInterval = floor([date timeIntervalSinceReferenceDate] / 60.0) * 60.0;
