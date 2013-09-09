@@ -266,6 +266,24 @@
     return newDate;
 }
 
+- (NSDate *)dateByMovingToNearestDayOfWeek:(NSUInteger)dayOfWeek
+{
+    // Create Gregorian calendar with current locale
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    calendar.locale = [NSLocale currentLocale];
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *weekdayComponents =[gregorian components:NSWeekdayCalendarUnit fromDate:self];
+    NSInteger weekday = [weekdayComponents weekday];
+    
+    NSUInteger deltaDays = ( (NSInteger)dayOfWeek - (NSInteger)weekday ) >= 0 ? ( dayOfWeek - weekday ) : ( (NSInteger)dayOfWeek - (NSInteger)weekday ) + 7 ;
+    NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
+    dayComponent.day = deltaDays;
+    NSDate *newDate = [self copy];
+    newDate = [calendar dateByAddingComponents:dayComponent toDate:newDate options:0];
+    return newDate;
+}
+
 #pragma mark convert to timezones
 
 - (NSDate*) convertToUTC
