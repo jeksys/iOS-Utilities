@@ -193,6 +193,25 @@
     return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
 
+- (NSDate*) updateDateWithHHMM:(NSString*)hhmmString{
+    
+    NSArray *timeArray = [hhmmString componentsSeparatedByString:@":"];
+    if (timeArray.count != 2) {
+        return self;
+    }
+    
+    NSUInteger hour = [[timeArray objectAtIndex:0] integerValue];
+    NSUInteger minutes = [[timeArray objectAtIndex:1] integerValue];
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components: NSYearCalendarUnit| NSMonthCalendarUnit| NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:[NSDate date]];
+    
+    [components setHour:hour];
+    [components setMinute:minutes];
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+
 + (NSDate *)dateByDroppingSecondsFromDate:(NSDate *)date
 {
     NSTimeInterval timeInterval = floor([date timeIntervalSinceReferenceDate] / 60.0) * 60.0;
@@ -247,5 +266,41 @@
     return newDate;
 }
 
+#pragma mark convert to timezones
+
+- (NSDate*) convertToUTC
+{
+    NSTimeZone* currentTimeZone = [NSTimeZone localTimeZone];
+    NSTimeZone* utcTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    
+    NSInteger currentGMTOffset = [currentTimeZone secondsFromGMTForDate:self];
+    NSInteger gmtOffset = [utcTimeZone secondsFromGMTForDate:self];
+    NSTimeInterval gmtInterval = gmtOffset - currentGMTOffset;
+    
+    NSDate* destinationDate = [[NSDate alloc] initWithTimeInterval:gmtInterval sinceDate:self];
+    return destinationDate;
+}
+
+- (NSDate*) convertToTimeZone:(NSString*)timeZone{
+    NSTimeZone* currentTimeZone = [NSTimeZone localTimeZone];
+    NSTimeZone* utcTimeZone = [NSTimeZone timeZoneWithName:timeZone];
+    
+    NSInteger currentGMTOffset = [currentTimeZone secondsFromGMTForDate:self];
+    NSInteger gmtOffset = [utcTimeZone secondsFromGMTForDate:self];
+    NSTimeInterval gmtInterval = gmtOffset - currentGMTOffset;
+    
+    NSDate* destinationDate = [[NSDate alloc] initWithTimeInterval:gmtInterval sinceDate:self];
+    return destinationDate;
+}
+
+- (NSUInteger) dayofWeek{
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *weekdayComponents =[gregorian components:NSWeekdayCalendarUnit fromDate:self];
+    NSInteger weekday = [weekdayComponents weekday];
+    // weekday 1 = Sunday for Gregorian calendar
+    
+    return weekday;
+}
 
 @end

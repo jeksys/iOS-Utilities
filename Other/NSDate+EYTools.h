@@ -26,8 +26,12 @@
 + (NSDate *)timeValueFromDate:(NSDate *)date;
 + (NSDate *)dateByDroppingSecondsFromDate:(NSDate *)date;
 - (NSDate*) updateDateWithHour:(NSUInteger)hour andMinutes:(NSUInteger)minutes;
+- (NSDate*) updateDateWithHHMM:(NSString*)hhmmString;
 
 - (NSDate*) updateDateComponentWithDate:(NSDate*)date;
 
+- (NSDate*) convertToUTC;
+- (NSDate*) convertToTimeZone:(NSString*)timeZone;
+- (NSUInteger) dayofWeek;
 
 @end
