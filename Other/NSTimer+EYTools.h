@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef void (^BKTimerBlock)(NSTimer *timer);
 
 @interface NSTimer (EYTools)
 
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(BKTimerBlock)inBlock repeats:(BOOL)inRepeats;
++ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(BKTimerBlock)inBlock repeats:(BOOL)inRepeats;
 @end
