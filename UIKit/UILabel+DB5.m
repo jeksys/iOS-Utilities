@@ -7,7 +7,7 @@
 //
 
 #import "UILabel+DB5.h"
-#import <VSTheme.h>
+#import "VSTheme.h"
 
 @implementation UILabel (DB5)
 
