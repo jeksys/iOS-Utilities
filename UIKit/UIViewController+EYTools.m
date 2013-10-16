@@ -20,6 +20,11 @@
     }];
 }
 
+- (void) dismissViewController:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
 - (NSString*)stringForError:(NSError*)error{
     
     NSString *errorText = @"An Error Occurred";
