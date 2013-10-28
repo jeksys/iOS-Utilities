@@ -349,9 +349,8 @@
 - (NSDate *)dateFromDate:(NSDate *)date
       withComponentFlags:(int)componentFlags
 {
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *components =[calendar components:componentFlags fromDate:self];
-    NSDate *newDate = [calendar dateFromComponents:components];
+    NSDateComponents *components =[[NSCalendar currentCalendar] components:componentFlags fromDate:self];
+    NSDate *newDate = [[NSCalendar currentCalendar] dateFromComponents:components];
     return newDate;
 }
 
