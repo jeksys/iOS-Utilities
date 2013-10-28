@@ -35,4 +35,7 @@
 - (NSDate*) convertToTimeZone:(NSString*)timeZone;
 - (NSUInteger) dayofWeek;
 
+- (BOOL)isEqualToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity;
+
+
 @end

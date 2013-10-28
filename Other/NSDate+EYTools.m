@@ -321,4 +321,39 @@
     return weekday;
 }
 
+- (BOOL)isEqualToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
+{
+    if ([self isEqualToDate:date2]) {
+        return YES;
+    }
+    
+    int componentFlags = [self componentFlagsWithGranularity:granularity];
+    
+    NSDate *date1 = [self dateFromDate:self withComponentFlags:componentFlags];
+    date2 = [self dateFromDate:date2 withComponentFlags:componentFlags];
+    
+    return [date1 isEqualToDate:date2];
+}
+
+- (int)componentFlagsWithGranularity:(NSCalendarUnit)granularity
+{
+    int componentFlags = 0;
+    
+    for (int i = 1<<1 ; i <= granularity ; i = i<<1) {
+        componentFlags = componentFlags | i;
+    }
+    
+    return componentFlags;
+}
+
+- (NSDate *)dateFromDate:(NSDate *)date
+      withComponentFlags:(int)componentFlags
+{
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components =[calendar components:componentFlags fromDate:self];
+    NSDate *newDate = [calendar dateFromComponents:components];
+    return newDate;
+}
+
+
 @end
