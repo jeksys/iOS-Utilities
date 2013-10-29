@@ -330,7 +330,7 @@
     int componentFlags = [self componentFlagsWithGranularity:granularity];
     
     NSDate *date1 = [self dateFromDate:self withComponentFlags:componentFlags];
-    date2 = [self dateFromDate:date2 withComponentFlags:componentFlags];
+    date2 = [date2 dateFromDate:date2 withComponentFlags:componentFlags];
     
     return [date1 isEqualToDate:date2];
 }
@@ -349,7 +349,7 @@
 - (NSDate *)dateFromDate:(NSDate *)date
       withComponentFlags:(int)componentFlags
 {
-    NSDateComponents *components =[[NSCalendar currentCalendar] components:componentFlags fromDate:self];
+    NSDateComponents *components =[[NSCalendar currentCalendar] components:componentFlags fromDate:date];
     NSDate *newDate = [[NSCalendar currentCalendar] dateFromComponents:components];
     return newDate;
 }
