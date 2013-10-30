@@ -354,5 +354,50 @@
     return newDate;
 }
 
+- (NSString*)formatTimeIntervalWithComponents:(NSCalendarUnit)unitFlags toDate:(NSDate*)toDate{
+    
+    return [self formatTimeIntervalWithComponents:unitFlags toDate:toDate withTimeUnits:NO];
+}
+
+- (NSString*)formatTimeIntervalWithComponents:(NSCalendarUnit)unitFlags toDate:(NSDate*)toDate withTimeUnits:(BOOL)showTimeUnits{
+
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:self toDate:[NSDate date] options:0];
+    
+    NSString *resultString;
+    NSMutableArray *componentsArray = [[NSMutableArray alloc] init];
+    
+    if (unitFlags & NSCalendarUnitMinute) {
+        NSString *formatString = [NSString stringWithFormat:@"%02d", [components minute]];
+        [componentsArray addObject:formatString];
+        if (showTimeUnits) {
+            if ([components minute] == 0) {
+            }else if ([components minute] == 1){
+                [componentsArray addObject:@" min"];
+            }else{
+                [componentsArray addObject:@" mins"];
+            }
+        }
+    }
+    if (unitFlags & NSCalendarUnitSecond) {
+        if (unitFlags | NSCalendarUnitMinute) {
+            [componentsArray addObject:@":"];
+        }
+        NSString *formatString = [NSString stringWithFormat:@"%02d", [components second]];
+        [componentsArray addObject:formatString];
+        if (showTimeUnits) {
+            if ([components second] == 0) {
+            }else if ([components second] == 1){
+                [componentsArray addObject:@" sec"];
+            }else{
+                [componentsArray addObject:@" sec"];
+            }
+        }
+    }
+    
+    resultString = [componentsArray componentsJoinedByString:@""];
+    
+    return resultString;
+}
+
 
 @end

@@ -36,6 +36,8 @@
 - (NSUInteger) dayofWeek;
 
 - (BOOL)isEqualToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity;
+- (NSString*)formatTimeIntervalWithComponents:(NSCalendarUnit)unitFlags toDate:(NSDate*)toDate;
+- (NSString*)formatTimeIntervalWithComponents:(NSCalendarUnit)unitFlags toDate:(NSDate*)toDate withTimeUnits:(BOOL)showTimeUnits;
 
 
 @end
