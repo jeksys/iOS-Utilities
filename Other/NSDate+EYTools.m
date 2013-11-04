@@ -361,13 +361,13 @@
 
 - (NSString*)formatTimeIntervalWithComponents:(NSCalendarUnit)unitFlags toDate:(NSDate*)toDate withTimeUnits:(BOOL)showTimeUnits{
 
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:self toDate:[NSDate date] options:0];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:self toDate:toDate options:0];
     
     NSString *resultString;
     NSMutableArray *componentsArray = [[NSMutableArray alloc] init];
     
     if (unitFlags & NSCalendarUnitMinute) {
-        NSString *formatString = [NSString stringWithFormat:@"%02d", [components minute]];
+        NSString *formatString = [NSString stringWithFormat:@"%d", [components minute]];
         [componentsArray addObject:formatString];
         if (showTimeUnits) {
             if ([components minute] == 0) {
