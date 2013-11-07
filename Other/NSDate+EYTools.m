@@ -365,8 +365,18 @@
     
     NSString *resultString;
     NSMutableArray *componentsArray = [[NSMutableArray alloc] init];
-    
-    if (unitFlags & NSCalendarUnitMinute) {
+
+    if (unitFlags & NSCalendarUnitHour && [components hour] != 0) {
+        NSString *formatString = [NSString stringWithFormat:@"%d", [components hour]];
+        [componentsArray addObject:formatString];
+        if (showTimeUnits) {
+            if ([components hour] != 0) {
+                [componentsArray addObject:@" h "];
+            }
+        }
+    }
+
+    if (unitFlags & NSCalendarUnitMinute && [components minute] != 0) {
         NSString *formatString = [NSString stringWithFormat:@"%d", [components minute]];
         [componentsArray addObject:formatString];
         if (showTimeUnits) {
