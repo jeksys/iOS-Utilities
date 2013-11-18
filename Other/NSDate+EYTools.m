@@ -100,6 +100,15 @@
 	return [shortTimeStampFormatter stringFromDate:self];
 }
 
+- (NSString*) customFormatWithString:(NSString*)string{
+    NSDateFormatter* yearOnlyFormatter;
+    yearOnlyFormatter = [[NSDateFormatter alloc] init];
+    NSLocale* enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [yearOnlyFormatter setLocale: enUS];
+    [yearOnlyFormatter setLenient: YES];
+    [yearOnlyFormatter setDateFormat:string];
+	return [yearOnlyFormatter stringFromDate:self];
+}
 
 - (NSString*) yearOnlyFormat{
     static NSDateFormatter* yearOnlyFormatter;
