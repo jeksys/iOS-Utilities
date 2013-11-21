@@ -391,9 +391,9 @@
         if (showTimeUnits) {
             if ([components minute] == 0) {
             }else if ([components minute] == 1){
-                [componentsArray addObject:@" min"];
+                [componentsArray addObject:@" m"];
             }else{
-                [componentsArray addObject:@" mins"];
+                [componentsArray addObject:@" m"];
             }
         }
     }
@@ -406,7 +406,7 @@
         if (showTimeUnits) {
             if ([components second] == 0) {
             }else if ([components second] == 1){
-                [componentsArray addObject:@" sec"];
+                [componentsArray addObject:@" s"];
             }else{
                 [componentsArray addObject:@" sec"];
             }
