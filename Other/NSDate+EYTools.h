@@ -29,6 +29,7 @@
 + (NSDate *)dateByDroppingSecondsFromDate:(NSDate *)date;
 - (NSDate*) updateDateWithHour:(NSUInteger)hour andMinutes:(NSUInteger)minutes;
 - (NSDate*) updateDateWithHHMM:(NSString*)hhmmString;
+- (NSDate *)dateFromDate:(NSDate *)date withComponentFlags:(int)componentFlags;
 
 - (NSDate*) updateDateComponentWithDate:(NSDate*)date;
 
