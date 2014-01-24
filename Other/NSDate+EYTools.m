@@ -330,6 +330,17 @@
     return weekday;
 }
 
+- (NSUInteger) month{
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *weekdayComponents =[gregorian components:NSMonthCalendarUnit fromDate:self];
+    NSInteger month = [weekdayComponents month];
+    // weekday 1 = Sunday for Gregorian calendar
+    
+    return month;
+}
+
+
 - (BOOL)isEqualToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
 {
     if ([self isEqualToDate:date2]) {

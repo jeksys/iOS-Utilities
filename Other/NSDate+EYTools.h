@@ -36,6 +36,7 @@
 - (NSDate*) convertToUTC;
 - (NSDate*) convertToTimeZone:(NSString*)timeZone;
 - (NSUInteger) dayofWeek;
+- (NSUInteger) month;
 
 - (BOOL)isEqualToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity;
 - (NSString*)formatTimeIntervalWithComponents:(NSCalendarUnit)unitFlags toDate:(NSDate*)toDate;
