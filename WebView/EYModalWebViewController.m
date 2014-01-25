@@ -68,7 +68,7 @@
     
 //    Reachability *reach = [Reachability reachabilityForInternetConnection];
 //    if ([reach isReachable]) {
-//        [self.webView loadRequest:_URLRequest];
+        [self.webView loadRequest:_URLRequest];
 //    } else {
 //        if (!_noInternetConnectionAlertView) {
 //            _noInternetConnectionAlertView = [[UIAlertView alloc] initWithTitle:nil message:@"You need an Internet connection to access this website." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
