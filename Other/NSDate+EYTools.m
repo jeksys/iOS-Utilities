@@ -340,6 +340,15 @@
     return month;
 }
 
+- (NSUInteger) hour{
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *weekdayComponents =[gregorian components:NSHourCalendarUnit fromDate:self];
+    NSInteger hour = [weekdayComponents hour];
+    
+    return hour;
+}
+
 
 - (BOOL)isEqualToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
 {
