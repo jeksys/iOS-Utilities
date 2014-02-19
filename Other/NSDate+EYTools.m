@@ -180,9 +180,9 @@
 
     NSCalendar *cal = [[NSCalendar alloc] init];
     NSDateComponents *components = [cal components:0 fromDate:date];
-    int year = [components year];
-    int month = [components month];
-    int day = [components day];
+    NSInteger year = [components year];
+    NSInteger month = [components month];
+    NSInteger day = [components day];
     
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setDay:year];
@@ -396,7 +396,7 @@
     NSMutableArray *componentsArray = [[NSMutableArray alloc] init];
 
     if (unitFlags & NSCalendarUnitHour && [components hour] != 0) {
-        NSString *formatString = [NSString stringWithFormat:@"%d", [components hour]];
+        NSString *formatString = [NSString stringWithFormat:@"%ld", (long)[components hour]];
         [componentsArray addObject:formatString];
         if (showTimeUnits) {
             if ([components hour] != 0) {
@@ -406,7 +406,7 @@
     }
 
     if (unitFlags & NSCalendarUnitMinute && [components minute] != 0) {
-        NSString *formatString = [NSString stringWithFormat:@"%d", [components minute]];
+        NSString *formatString = [NSString stringWithFormat:@"%ld", (long)[components minute]];
         [componentsArray addObject:formatString];
         if (showTimeUnits) {
             if ([components minute] == 0) {
@@ -421,7 +421,7 @@
         if (unitFlags | NSCalendarUnitMinute) {
             [componentsArray addObject:@":"];
         }
-        NSString *formatString = [NSString stringWithFormat:@"%02d", [components second]];
+        NSString *formatString = [NSString stringWithFormat:@"%02ld", (long)[components second]];
         [componentsArray addObject:formatString];
         if (showTimeUnits) {
             if ([components second] == 0) {
