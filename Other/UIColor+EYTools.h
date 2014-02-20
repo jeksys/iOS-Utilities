@@ -10,7 +10,6 @@
 
 @interface UIColor (EYTools)
 
-static UIColor *colorWithHexString(NSString *hexString);
-
++(UIColor *) colorWithHexString:(NSString*)hexString;
 
 @end

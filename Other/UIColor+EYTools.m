@@ -14,10 +14,7 @@ static BOOL stringIsEmpty(NSString *s) {
 	return s == nil || [s length] == 0;
 }
 
-static UIColor *colorWithHexString(NSString *hexString) {
-    
-	/*Picky. Crashes by design.*/
-	
++(UIColor *)colorWithHexString:(NSString*)hexString {
 	if (stringIsEmpty(hexString))
 		return [UIColor blackColor];
     
