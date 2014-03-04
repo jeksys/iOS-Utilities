@@ -15,7 +15,7 @@ static BOOL stringIsEmpty(NSString *s) {
 }
 
 +(UIColor *)colorWithHexString:(NSString*)hexString {
-	if (stringIsEmpty(hexString))
+	if (stringIsEmpty(hexString) || hexString.length < 6)
 		return [UIColor blackColor];
     
 	NSMutableString *s = [hexString mutableCopy];
