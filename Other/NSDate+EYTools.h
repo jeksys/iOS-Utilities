@@ -20,6 +20,8 @@
 - (NSString*) timeFormatShort;
 - (NSString*) customFormatWithString:(NSString*)string;
 
++ (NSDate*) shortFormatFromString:(NSString *)shortFormatString;
+
 + (NSDate*) dateWithYear:(int) year month:(int)month day:(int)day;
 + (NSDate*) dateWithDouble:(double)doubleDate;
 

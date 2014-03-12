@@ -122,6 +122,18 @@
 	return [yearOnlyFormatter stringFromDate:self];
 }
 
++ (NSDate*) shortFormatFromString:(NSString *)shortFormatString{
+    static NSDateFormatter* formatter;
+	if(formatter == nil) {
+		formatter = [[NSDateFormatter alloc] init];
+		NSLocale* enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+		[formatter setLocale: enUS];
+		[formatter setLenient: YES];
+		[formatter setDateFormat:@"yyyy-MM-dd"];
+	}
+	return [formatter dateFromString:shortFormatString];
+}
+
 + (NSDate*) dateWithDouble:(double)doubleDate{
     if (doubleDate > 0 ) {
         return [NSDate dateWithTimeIntervalSince1970:(doubleDate / 1000)];
