@@ -10,6 +10,8 @@
 
 @interface UIImage (EYTool)
 
++ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
 -(UIImage *)makeRoundedImageWithRadius:(float)radius;
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 -(UIImage*)scaleToSize:(CGSize)size;

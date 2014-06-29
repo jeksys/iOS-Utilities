@@ -10,6 +10,9 @@
 
 @interface UIColor (EYTools)
 
+- (UIColor *)lighterColorForColor;
+- (UIColor *)darkerColorForColor;
+
 +(UIColor *) colorWithHexString:(NSString*)hexString;
 
 @end
