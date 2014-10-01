@@ -176,6 +176,19 @@
 	return [timeFormatter stringFromDate:self];
 }
 
+- (NSString*) timeFormatShort2{
+    static NSDateFormatter* timeFormatter;
+    if(timeFormatter == nil) {
+        timeFormatter = [[NSDateFormatter alloc] init];
+        NSLocale* enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        [timeFormatter setLocale: enUS];
+        [timeFormatter setLenient: YES];
+        [timeFormatter setDateFormat:@"h:mm a"];
+    }
+    return [timeFormatter stringFromDate:self];
+}
+
+
 - (NSString*) longFormatDayMDY{
     static NSDateFormatter* longFormatDayMDY;
 	if(longFormatDayMDY == nil) {
